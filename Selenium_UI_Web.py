@@ -131,30 +131,36 @@
 # driver.quit()
 #
 # --------------------------------------------------------------------------------
+# from time import sleep
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+
+# driver = webdriver.Chrome()
+# driver.get("www.google.com")
+# sleep(2)
+#
+# elements = (By.CSS_SELECTOR,"#user")
+# #
+# # WebDriverWait(driver,10).until(EC.presence_of_elements_located(elements)).send_keys("admin")
+# wait = WebDriverWait(driver,10)
+# elements = wait.until(EC.presence_of_element_located(elements))
+# elements.send_keys("admin")
+# sleep(2)
+#
+# # wait.until(EC.presence_of_element_located(elements))
+#
+#
+#
+# sleep(2)
+#
+# driver.quit()
+# ------------------------------------------------
+
 from time import sleep
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
-driver = webdriver.Chrome()
-driver.get("www.google.com")
-sleep(2)
-
-elements = (By.CSS_SELECTOR,"#user")
-#
-# WebDriverWait(driver,10).until(EC.presence_of_elements_located(elements)).send_keys("admin")
-wait = WebDriverWait(driver,10)
-elements = wait.until(EC.presence_of_element_located(elements))
-elements.send_keys("admin")
-sleep(2)
-
-# wait.until(EC.presence_of_element_located(elements))
-
-
-
-sleep(2)
-
-driver.quit()
+driver =
 
 
