@@ -161,6 +161,33 @@
 from time import sleep
 from selenium import webdriver
 
-driver =
+driver = webdriver.Chrome()
+driver.get("www.google.com")
+
+#option 1_name
+tags = driver.find_element_by_tag_name("option")
+for tag in tags:
+    if tag.get_atribute("value") == "sh":
+        sleep(2)
+        tag.click()
+for tag in tags:
+    if tag.text == "chongqing":
+        sleep(2)
+        tag.click()
+for tag in tags:
+    if tag.get_atribute("value") == "gz":
+        sleep(2)
+        tag.click()
+
+#option2_css
+driver.find_element_by_css_selector("[value = 'sh'").click()
+sleep(2)
+driver.find_element_by_css_selector("[value = 'qc'").click()
+sleep(2)
+driver.find_element_by_css_selector("[value = 'gz'").click()
+sleep(2)
+
+#option3
+
 
 
