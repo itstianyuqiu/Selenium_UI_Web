@@ -158,36 +158,131 @@
 # driver.quit()
 # ------------------------------------------------
 
-from time import sleep
+# from time import sleep
+# from selenium import webdriver
+# from selenium.webdriver.support.select import Select
+#
+# driver = webdriver.Chrome()
+# driver.get("www.google.com")
+#
+# #option 1_name
+# tags = driver.find_element_by_tag_name("option")
+# for tag in tags:
+#     if tag.get_atribute("value") == "sh":
+#         sleep(2)
+#         tag.click()
+# for tag in tags:
+#     if tag.text == "chongqing":
+#         sleep(2)
+#         tag.click()
+# for tag in tags:
+#     if tag.get_atribute("value") == "gz":
+#         sleep(2)
+#         tag.click()
+#
+# #option2_css
+# driver.find_element_by_css_selector("[value = 'sh'").click()
+# sleep(2)
+# driver.find_element_by_css_selector("[value = 'qc'").click()
+# sleep(2)
+# driver.find_element_by_css_selector("[value = 'gz'").click()
+# sleep(2)
+#
+# #option3_Select_only for select
+# webelement = driver.find_element_by_css_selector("seleect")
+#
+#
+# Select(webelement).select_by_index(1)
+# sleep(2)
+#
+# Select.select_by_index(2)
+# Select.select_by_visible_text("sh")
+# sleep(2)
+#
+# Select.select_by_index(3)
+# sleep(2)
+#
+# select = Select(webelement)
+#
+# select.select_by_index(1)
+# sleep(2)
+#
+# select.select_by_index(3)
+# sleep(2)
+#
+# select.select_by_index(2)
+# sleep(2)
+#
+# driver.quit()
+# ---------------------------------------------------
+# from time import sleep
+# from selenium import webdriver
+# from selenium.webdriver.support.select import Select
+#
+# driver = webdriver.Chrome()
+#
+# driver.get("www.google.com")
+#
+# driver.find_element_by_css_selector("#alert").click()
+#
+# alert = driver.switch_to.alert
+#
+# text = alert.text
+# print("the text of alert is %s"%text)
+#
+# # alert.accept()
+# alert.dismiss()
+#
+# driver.find_element_by_css_selector("#user").send_keys("admin")
+# driver.find_element_by_css_selector("#password").send_keys("123456")
+# driver.find_element_by_css_selector("#tel").send_keys("0211200010")
+# driver.find_element_by_css_selector("#email").send_keys("123@gmail.com")
+# sleep(2)
+#
+#
+# driver.quit()
+# ------------------------------------------------------------
+
+# from selenium import webdriver
+# from time import sleep
+# from selenium.webdriver.support.select import Select
+#
+# driver = webdriver.Chrome()
+# driver.get("www.google.com")
+#
+# js1 = "window.scrollTo(0,10000)"
+# driver.execute_script(js1)
+# sleep(2)
+#
+# js2 = "window.scrollTo(0,0)"
+# driver.execute_script(js2)
+# sleep(2)
+#
+# driver.quit()
+
+# -------------------------------------------------
+
 from selenium import webdriver
+from time import sleep
 
 driver = webdriver.Chrome()
-driver.get("www.google.com")
+driver.get("http://www.baidu.com")
 
-#option 1_name
-tags = driver.find_element_by_tag_name("option")
-for tag in tags:
-    if tag.get_atribute("value") == "sh":
-        sleep(2)
-        tag.click()
-for tag in tags:
-    if tag.text == "chongqing":
-        sleep(2)
-        tag.click()
-for tag in tags:
-    if tag.get_atribute("value") == "gz":
-        sleep(2)
-        tag.click()
+str = ("id":"userId","name": "tsstName")
 
-#option2_css
-driver.find_element_by_css_selector("[value = 'sh'").click()
-sleep(2)
-driver.find_element_by_css_selector("[value = 'qc'").click()
-sleep(2)
-driver.find_element_by_css_selector("[value = 'gz'").click()
-sleep(2)
+driver.add_cookie(str)
 
-#option3
+cookies = driver.get_cookies()
+
+print("-------------------------")
+
+print(cookies)
+
+driver.quit()
+
+
+
+
 
 
 
